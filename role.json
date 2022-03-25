@@ -1,0 +1,18 @@
+[
+  {
+    "name": "engineer",
+    "image": "https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+  },
+  {
+    "name": "designer",
+    "image": "https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+  },
+  {
+    "name": "Entrepreneur",
+    "image": "https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+  },
+  {
+    "name": "tinkerBell",
+    "image": "http://e.rimg.com.tw/s2/f/fa/ae/21212272262830_685_m.jpg"
+  }
+]
