@@ -17,12 +17,14 @@ app.use(express.static('public'))
  })
 
 app.post("/", (req, res) => {
-  console.log(req.body)
+  console.log(req.body.role)
+    if (req.body.role === undefined) {
+    const err_msg = "請選擇職業再送出 !";
+    return res.render("index", { role: roleData, err_msg });
+   }
   const tasker = req.body.role;
-  console.log(tasker)
   const dryTalk = getDryTalk(req.body)
-  console.log(dryTalk)
-  res.render("index", { role: roleData, dryTalk , tasker: req.body});
+  res.render("index", { role: roleData, dryTalk });
 });
 
 app.listen(port, () => {
