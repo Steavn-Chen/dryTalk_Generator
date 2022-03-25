@@ -1,6 +1,6 @@
 <div class="container">
   <form action="/" method="post">
-    <p class="text-center mt-5 fs-1 fst-italic mx-auto ">誰想要聽幹話 ?</p>
+    <p class="text-center mt-5 fs-1 fst-italic mx-auto ">想聽哪一位的幹話 ?</p>
     <div class="row row-cols-1 row-cols-md-4 g-4 card-interface mt-5 "
       id="card-interface">
       {{#each role}}
@@ -10,9 +10,11 @@
           <div class="card-body">
             <div class="form-check d-flex justify-content-center">
               <input class="form-check-input my-auto" type="radio" name="role"
-                id="{{this.name}}" {{#if tasker}} checked {{/if}} value="{{this.name}}">
+                id="{{this.name}}" 
+                {{#is this.name ../tasker}} checked {{/is}}
+                value="{{this.name}}">
               <label class="form-check-label r mx-2" for="{{this.name}}">
-                <span class="badge bg-secondary rounded-pill">{{this.name_cht}}</span>
+                <span class="badge bg-secondary rounded-pill fs-5q">{{this.name_cht}}</span>
               </label>
             </div>
           </div>
@@ -28,16 +30,17 @@
         <div class="col-9 ">
           <div class="form-group">
             <label for="exampleTextarea" class="form-label mt-4">
-              {{#if err_msg}}
-              <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <strong>{{err_msg}}</strong>
+              {{#is disMessage.message 'error'}}
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong class="text-dark">{{disMessage.hint}}</strong>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
-              {{else}}
+              {{/is}}
+              {{#is disMessage.message 'success'}}
               <div class="alert alert-success" role="alert">
-                <strong>多麼完美的幹話 !</strong>
+                <strong>{{disMessage.hint}}</strong>
               </div>
-              {{/if}}
+              {{/is}}
             </label>
             <textarea class="form-control" id="exampleTextarea" rows="4">{{dryTalk}}</textarea>
           </div>
