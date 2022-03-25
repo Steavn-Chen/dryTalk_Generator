@@ -1,18 +1,22 @@
 [
   {
     "name": "engineer",
+    "name_cht": "工程師",
     "image": "https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
   },
   {
     "name": "designer",
+    "name_cht": "設計師",
     "image": "https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
   },
   {
-    "name": "Entrepreneur",
+    "name": "entrepreneur",
+    "name_cht": "創業家",
     "image": "https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
   },
   {
-    "name": "tinkerBell",
+    "name": "Doraemon",
+    "name_cht": "哆啦A夢",
     "image": "http://e.rimg.com.tw/s2/f/fa/ae/21212272262830_685_m.jpg"
   }
 ]

@@ -43,7 +43,7 @@
 }
 
 /* // XX-Large devices (larger desktops) */
-@media (min-width: 1399.98px) and  (max-width: 1800.98px) { 
+@media (min-width: 1399.98px) and  (max-width: 2000.98px) { 
   .card-interface .card .card-img-top {
     border: 1px solid rgb(233, 17, 168);
     height: 246px;

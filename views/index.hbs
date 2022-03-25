@@ -9,10 +9,10 @@
           <img src="{{this.image}}" class="card-img-top " alt="...">
           <div class="card-body border border-2 border-danger">
             <div class="form-check border border-2 border-success d-flex justify-content-center">
-              <input class="form-check-input my-auto border border-2 border-dark" type="radio" name="{{this.name}}"
-                id="{{this.name}}">
+              <input class="form-check-input my-auto border border-2 border-dark" type="radio" name="role"
+                id="{{this.name}}" {{#if tasker}} checked {{/if}} value="{{this.name}}">
               <label class="form-check-label border border-2 border-danger mx-2" for="{{this.name}}">
-                <h class="badge bg-secondary rounded-pill border border-2 border-warning">{{this.name}}</h>
+                <span class="badge bg-secondary rounded-pill border border-2 border-warning">{{this.name_cht}}</span>
               </label>
             </div>
           </div>
@@ -28,11 +28,23 @@
           <div class="col-9 border border-2 border-danger">
             <div class="form-group">
               <label for="exampleTextarea" class="form-label mt-4">完美的幹話 !</label>
-              <textarea class="form-control" id="exampleTextarea" rows="7"></textarea>
+              <textarea class="form-control" id="exampleTextarea" rows="7">{{dryTalk}}</textarea>
             </div>
           </div>
         </div>
       </div>
     </div>
   </form>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <label class="form-check-label" for="flexRadioDefault1">
+    Default radio
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+  <label class="form-check-label" for="flexRadioDefault2">
+    Default checked radio
+  </label>
 </div>
